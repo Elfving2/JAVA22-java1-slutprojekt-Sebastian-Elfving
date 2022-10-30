@@ -4,7 +4,7 @@ import java.time.temporal.WeekFields;
 import java.util.Locale;
 
 public class GetDate {
-  public static String getDate ( int x, String today){
+  public static String getDate (int x, String today){
     LocalDate now = LocalDate.now();
     TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
     LocalDate date = now.with(fieldISO, x);
